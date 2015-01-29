@@ -1,0 +1,133 @@
+charset "utf-8";
+
+html,body,ul,ol,li,dl,dt,dd,div,p,label {
+	margin : 0; 
+	padding: 0;
+}
+
+body {
+	cursor      : default;
+	position    : fixed;
+	font-size   : 14px;
+	background  : none;
+	font-family : "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+	line-height : 150%;
+	text-shadow : 1px 1px 1px rgba(255,255,255,0.3);
+	-webkit-user-select: none;
+}
+
+body, a {
+	color : #fff;
+}
+
+img,input[type=image] {
+	-webkit-user-drag: none;
+}
+
+.wrapper {
+	position   : relative;
+	height     : auto;
+	width      : auto;
+	display    : -webkit-box;
+}
+
+.leftbox {
+	position : relative;
+	width    : 300px;
+/*	border   : dotted 1px #999;
+*/
+}
+
+.rightbox {
+	position : relative;
+	width    : 180px;
+	height   : 510px;
+/*	border   : dotted 1px #999;
+*/
+}
+
+#shell {
+	height   : 510px;
+	right    : 0;
+	bottom   : 0;
+	position : absolute;
+	z-index  : 100;
+}
+
+#balloon {
+	margin    : 0;
+	padding   : 0;
+	color     : #fff;
+	width     : auto;
+	height    : auto;
+	display   : -webkit-box;
+	min-width : 100px;
+	max-width : 300px;
+	position  : absolute;
+	top       : 70px;
+	right     : 0;
+	padding   : 1em 1em;
+	background: rgba(60,60,60,0.7);
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	-webkit-border-radius:10px;
+}
+
+#balloon p {
+	width  : 110px;
+	word-break: break-all;
+}
+
+#balloon a {
+	display: -webkit-box;
+}
+
+#balloon img {
+	-webkit-border-radius: 5px;
+}
+
+.touch {
+	opacity    : 0;
+	z-index    : 999;
+	background : none;
+	cursor     : pointer;
+	position   : absolute;
+	border     : dashed 1px #999;
+	-webkit-border-radius : 25px;
+/*	border   : dotted 1px #999;*/
+}
+
+.touch.head {
+	top    : 58px;
+	left   : 18px;
+	width  : 70px;
+	height : 30px;
+}
+
+.touch.eye {
+	top    : 110px;
+	left   : 28px;
+	width  : 52px;
+	height : 18px;
+}
+
+.touch.breast {
+	top    : 175px;
+	left   : 30px;
+	width  : 55px;
+	height : 25px;
+}
+
+.touch.abdomen {
+	top    : 250px;
+	left   : 85px;
+	width  : 60px;
+	height : 50px;
+}
+
+.shadow {
+	position: absolute;
+	bottom : -10px;
+	left   : -31px;
+	z-index: -1;
+}
