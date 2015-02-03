@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
   grunt.initConfig({
 
@@ -14,10 +14,7 @@ module.exports = function(grunt) {
         },
         external: [
           'nw.gui'
-        ]/*,
-        alias: [
-          './modules/cache.js:cache'
-        ]*/
+        ]
       },
       dist: {
         files: {
@@ -43,6 +40,18 @@ module.exports = function(grunt) {
         buildDir: './webkitbuilds'
       },
       src: ['./app/**/*']
+    },
+
+    less: {
+      dist: {
+        options: {
+          paths: ['less'],
+          yuicompress: true
+        },
+        files: {
+          'app/styles/prividenie.css': 'less/prividenie.less'
+        }
+      }
     }
 
   });
@@ -50,6 +59,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-node-webkit-builder');
+  grunt.loadNpmTasks('grunt-contrib-less');
 
   grunt.registerTask('default', ['copy:libraries', 'browserify']);
 

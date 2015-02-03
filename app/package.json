@@ -4,12 +4,13 @@
   "version": "1.0.1",
   "main": "index.html",
   "window": {
-    "toolbar": true,
-    "frame": true,
+    "toolbar": false,
+    "frame": false,
+    "transparent": true,
     "title": "DesktopAjipo",
     "width": 640,
-    "height": 490,
+    "height": 538,
     "max_width": 640,
-    "max_height": 490
+    "max_height": 538
   }
 }
