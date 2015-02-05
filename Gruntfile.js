@@ -18,7 +18,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'app/scripts/app.js': ['./browserify_modules/**/*.js']
+          'app/scripts/modules.js': ['./browserify_modules/**/*.js']
         }
       }
     },
@@ -27,8 +27,13 @@ module.exports = function (grunt) {
       libraries: {
         files: [{
           expand: true,
-          cwd: 'node_modules/sugar/release',
-          src: 'sugar-full.development.js',
+          cwd: 'bower_components/sugar/release',
+          src: 'sugar-full.min.js',
+          dest: 'app/scripts/'
+        },{
+          expand: true,
+          cwd: 'bower_components/zepto',
+          src: 'zepto.min.js',
           dest: 'app/scripts/'
         }]
       }
