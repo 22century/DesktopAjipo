@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="styles/normalize.css"/>
+  <link rel="stylesheet" href="styles/prividenie.css"/>
+  <script src="scripts/sugar-full.min.js"></script>
 </head>
 <body>
+
+<article id="prividenie">
+  <div class="leftbox">
+    <div class="balloon">
+      <p id="message">あああああおおおおおおおおおお</p>
+    </div>
+
+  </div>
+  <div class="rightbox">
+    <img id="avatar" src="images/ajipoko/normal.png"/>
+    <img class="shadow" src="images/shadow.png"/>
+  </div>
+</article>
+
+<article id="twitter">
+  <a class="twitter-timeline" data-dnt="true"
+    href="https://twitter.com/search?q=from%3Aajipo%20OR%20from%3Anise_ajipo"
+    data-widget-id="563021539701161986"></a>
+  <script>!function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+      js = d.createElement(s);
+      js.id = id;
+      js.src = p + "://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }
+  }(document, "script", "twitter-wjs");</script>
+</article>
+
+<script src="scripts/modules.js"></script>
 
 </body>
 </html>
