@@ -1,0 +1,21 @@
+{
+  "name": "DesktopAjipo",
+  "version": "1.0.0",
+  "homepage": "https://github.com/22century/DesktopAjipo",
+  "authors": [
+    "22century"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "zeptojs": "~1.1.6",
+    "sugar": "~1.4.1"
+  }
+}
