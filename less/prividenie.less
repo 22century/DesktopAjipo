@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+@avatar-width: 250px;
+@avatar-height: 538px;
+
 body {
   cursor: default;
   font-size: 14px;
@@ -10,117 +13,164 @@ body {
   -webkit-app-region: drag;
 }
 
-body, a {
-  color: #fff;
-}
-
-img, input[type=image] {
+img {
   -webkit-user-drag: none;
 }
 
-.wrapper {
-  position: relative;
-  height: auto;
-  width: auto;
+#prividenie {
+
   display: -webkit-box;
+
+  .leftbox {
+    width: 300px;
+
+    #balloon {
+      margin: 50px 0 0 10px;
+      border-radius: 10px;
+      max-height: 500px;
+      background: rgba(60, 60, 60, 0.7);
+      color: #fff;
+    }
+
+    #message {
+      padding: 10px;
+    }
+
+  }
+
+  .rightbox {
+
+    width: @avatar-width;
+    height: @avatar-height;
+    position: relative;
+
+    #avatar {
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: 2;
+    }
+
+    .shadow {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: 0 auto;
+      width: 170px;
+    }
+
+  }
+
 }
 
-.leftbox {
-  position: relative;
-  width: 300px;
-  /*	border   : dotted 1px #999;
-  */
+#twitter {
+  display: none;
 }
 
-.rightbox {
-  position: relative;
-  width: 180px;
-  height: 510px;
-  /*	border   : dotted 1px #999;
-  */
-}
-
-#shell {
-  height: 510px;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  z-index: 100;
-}
-
-#balloon {
-  margin: 0;
-  color: #fff;
-  width: auto;
-  height: auto;
-  display: -webkit-box;
-  min-width: 100px;
-  max-width: 300px;
-  position: absolute;
-  top: 70px;
-  right: 0;
-  padding: 1em 1em;
-  background: rgba(60, 60, 60, 0.7);
-  -webkit-box-pack: center;
-  -webkit-box-align: center;
-  -webkit-border-radius: 10px;
-}
-
-#balloon p {
-  width: 110px;
-  word-break: break-all;
-}
-
-#balloon a {
-  display: -webkit-box;
-}
-
-#balloon img {
-  -webkit-border-radius: 5px;
-}
-
-.touch {
-  opacity: 0;
-  z-index: 999;
-  background: none;
-  cursor: pointer;
-  position: absolute;
-  border: dashed 1px #999;
-  -webkit-border-radius: 25px;
-  /*	border   : dotted 1px #999;*/
-}
-
-.touch.head {
-  top: 58px;
-  left: 18px;
-  width: 70px;
-  height: 30px;
-}
-
-.touch.eye {
-  top: 110px;
-  left: 28px;
-  width: 52px;
-  height: 18px;
-}
-
-.touch.breast {
-  top: 175px;
-  left: 30px;
-  width: 55px;
-  height: 25px;
-}
-
-.touch.abdomen {
-  top: 250px;
-  left: 85px;
-  width: 60px;
-  height: 50px;
-}
-
-.shadow {
-  position: absolute;
-  bottom: -10px;
-  left: -31px;
-  z-index: -1;
-}
+//.wrapper {
+//  position: relative;
+//  height: auto;
+//  width: auto;
+//  display: -webkit-box;
+//}
+//
+//.leftbox {
+//  position: relative;
+//  width: 300px;
+//  /*	border   : dotted 1px #999;
+//  */
+//}
+//
+//.rightbox {
+//  position: relative;
+//  width: 180px;
+//  height: 510px;
+//  /*	border   : dotted 1px #999;
+//  */
+//}
+//
+//#shell {
+////  height: 510px;
+//  right: 0;
+//  bottom: 0;
+//  position: absolute;
+//  z-index: 100;
+//}
+//
+//#balloon {
+//  margin: 0;
+//  color: #fff;
+//  width: auto;
+//  height: auto;
+//  display: -webkit-box;
+//  min-width: 100px;
+//  max-width: 300px;
+//  position: absolute;
+//  top: 70px;
+//  right: 0;
+//  padding: 1em 1em;
+//  background: rgba(60, 60, 60, 0.7);
+//  -webkit-box-pack: center;
+//  -webkit-box-align: center;
+//  -webkit-border-radius: 10px;
+//}
+//
+//#balloon p {
+//  width: 110px;
+//  word-break: break-all;
+//}
+//
+//#balloon a {
+//  display: -webkit-box;
+//}
+//
+//#balloon img {
+//  -webkit-border-radius: 5px;
+//}
+//
+//.touch {
+//  opacity: 0;
+//  z-index: 999;
+//  background: none;
+//  cursor: pointer;
+//  position: absolute;
+//  border: dashed 1px #999;
+//  -webkit-border-radius: 25px;
+//  /*	border   : dotted 1px #999;*/
+//}
+//
+//.touch.head {
+//  top: 58px;
+//  left: 18px;
+//  width: 70px;
+//  height: 30px;
+//}
+//
+//.touch.eye {
+//  top: 110px;
+//  left: 28px;
+//  width: 52px;
+//  height: 18px;
+//}
+//
+//.touch.breast {
+//  top: 175px;
+//  left: 30px;
+//  width: 55px;
+//  height: 25px;
+//}
+//
+//.touch.abdomen {
+//  top: 250px;
+//  left: 85px;
+//  width: 60px;
+//  height: 50px;
+//}
+//
+//.shadow {
+//  position: absolute;
+//  bottom: -10px;
+//  left: -31px;
+//  z-index: -1;
+//}
