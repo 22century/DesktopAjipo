@@ -1,6 +1,5 @@
-/**
- * intro
- */
+var Social = require('./social.js'),
+    Prividenie = require('./Prividenie.js');
 
 var _readied = false;
 
@@ -21,6 +20,7 @@ setTimeout(function(){
             //
         }
     }
-    console.log('aaaa');
     setTimeout(arguments.callee, 100);
 })();
+
+new Prividenie();
