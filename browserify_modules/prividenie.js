@@ -3,7 +3,6 @@
  */
 var prividenie, Prividenie = function () {
     prividenie = this;
-    this._initialize();
 };
 
 const MESSAGES = require('./messages.js');
@@ -14,12 +13,10 @@ var _balloon = new(require('./balloon.js')),
 
 Prividenie.prototype = {
 
-    _initialize: function () {
-        prividenie.setTimer();
-    },
-
     change: function (name) {
         _imgAvatar.src = 'images/ajipoko/' + name + '.png';
+        prividenie.clearTimer();
+        prividenie.setTimer();
     },
 
     setTimer: function () {
@@ -35,6 +32,18 @@ Prividenie.prototype = {
 
     random: function () {
         var msgs = MESSAGES.RANDOM.sample();
+        prividenie.change(msgs[0]);
+        _balloon.open(msgs[1]);
+    },
+
+    mac: function () {
+        var msgs = MESSAGES.MAC.sample();
+        prividenie.change(msgs[0]);
+        _balloon.open(msgs[1]);
+    },
+
+    sleep: function () {
+        var msgs = MESSAGES.SLEEP.sample();
         prividenie.change(msgs[0]);
         _balloon.open(msgs[1]);
     }
