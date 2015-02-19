@@ -10,41 +10,31 @@ body {
 img {
   -webkit-user-drag: none;
 }
-#prividenie {
-  display: -webkit-box;
-}
-#prividenie .leftbox {
-  width: 300px;
-}
-#prividenie .leftbox #balloon {
-  margin: 50px 0 0 10px;
+#prividenie #balloon {
+  position: absolute;
+  top: 90px;
+  right: 190px;
   border-radius: 10px;
   max-height: 500px;
   background: rgba(60, 60, 60, 0.7);
   color: #fff;
+  min-width: 100px;
+  max-width: 250px;
 }
-#prividenie .leftbox #message {
+#prividenie #message {
   padding: 10px;
 }
-#prividenie .rightbox {
-  width: 250px;
-  height: 538px;
-  position: relative;
-}
-#prividenie .rightbox #avatar {
-  bottom: 0;
-  right: 0;
+#prividenie #avatar {
   position: absolute;
+  bottom: 10px;
+  right: 0;
   z-index: 2;
   -webkit-app-region: drag;
 }
-#prividenie .rightbox .shadow {
+#prividenie .shadow {
   position: absolute;
-  right: 0;
-  left: 0;
+  right: 45px;
   bottom: 0;
-  margin: 0 auto;
-  width: 170px;
 }
 #twitter {
   display: none;

@@ -18,48 +18,36 @@ img {
 
 #prividenie {
 
-  display: -webkit-box;
+//  display: -webkit-box;
 
-  .leftbox {
-    width: 300px;
-
-    #balloon {
-      margin: 50px 0 0 10px;
-      border-radius: 10px;
-      max-height: 500px;
-      background: rgba(60, 60, 60, 0.7);
-      color: #fff;
-    }
-
-    #message {
-      padding: 10px;
-    }
-
+  #balloon {
+    position: absolute;
+    top: 90px;
+    right: 190px;
+    border-radius: 10px;
+    max-height: 500px;
+    background: rgba(60, 60, 60, 0.7);
+    color: #fff;
+    min-width: 100px;
+    max-width: 250px;
   }
 
-  .rightbox {
+  #message {
+    padding: 10px;
+  }
 
-    width: @avatar-width;
-    height: @avatar-height;
-    position: relative;
+  #avatar {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    z-index: 2;
+    -webkit-app-region: drag;
+  }
 
-    #avatar {
-      bottom: 0;
-      right: 0;
-      position: absolute;
-      z-index: 2;
-      -webkit-app-region: drag;
-    }
-
-    .shadow {
-      position: absolute;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      margin: 0 auto;
-      width: 170px;
-    }
-
+  .shadow {
+    position: absolute;
+    right: 45px;
+    bottom: 0;
   }
 
 }
