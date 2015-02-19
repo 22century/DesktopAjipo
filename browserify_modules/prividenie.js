@@ -13,7 +13,8 @@ var _balloon = new(require('./balloon.js')),
 
 Prividenie.prototype = {
 
-    change: function (name) {
+    change: function (name, message) {
+        _balloon.open(message);
         _imgAvatar.src = 'images/ajipoko/' + name + '.png';
     },
 
@@ -23,12 +24,10 @@ Prividenie.prototype = {
     },
 
     setTimer: function () {
-        if (_timerId > 0) {
-            prividenie.clearTimer();
-        }
         _timerId = setTimeout(function(){
             _timerId = 0;
-            prividenie.random();
+            var msgs = MESSAGES.RANDOM.sample();
+            prividenie.change(msgs[0], msgs[1]);
             prividenie.setTimer();
         }, 5 * 1000);
         console.log('setTimer:', _timerId);
@@ -41,21 +40,20 @@ Prividenie.prototype = {
 
     random: function () {
         var msgs = MESSAGES.RANDOM.sample();
-        prividenie.change(msgs[0]);
-        _balloon.open(msgs[1]);
+        prividenie.change(msgs[0], msgs[1]);
         prividenie.resetTimer();
     },
 
     mac: function () {
         var msgs = MESSAGES.MAC.sample();
-        prividenie.change(msgs[0]);
-        _balloon.open(msgs[1]);
+        prividenie.change(msgs[0], msgs[1]);
+        prividenie.resetTimer();
     },
 
     sleep: function () {
         var msgs = MESSAGES.SLEEP.sample();
-        prividenie.change(msgs[0]);
-        _balloon.open(msgs[1]);
+        prividenie.change(msgs[0], msgs[1]);
+        prividenie.resetTimer();
     }
 
 };
