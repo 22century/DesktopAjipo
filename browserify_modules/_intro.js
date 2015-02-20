@@ -1,6 +1,7 @@
-var Social = require('./social.js'),
-    Prividenie = require('./Prividenie.js'),
-    Gui = require('nw.gui');
+var prividenie = new (require('./Prividenie.js')),
+    social = new (require('./social.js')),
+    gui = require('nw.gui'),
+    menu = new gui.Menu();
 
 var _readied = false;
 
@@ -25,37 +26,34 @@ setTimeout(function(){
 })();
 
 
-var prividenie = new Prividenie();
 prividenie.setTimer();
 
-var menu = new Gui.Menu();
-
-menu.append(new Gui.MenuItem({
+menu.append(new gui.MenuItem({
     label: 'ドン！',
     click: prividenie.random
 }));
 
-menu.append(new Gui.MenuItem({
+menu.append(new gui.MenuItem({
     label: '動画はよ',
-    click: function () { /* niconico */ }
+    click: social.getNicovideos
 }));
 
-menu.append(new Gui.MenuItem({
+menu.append(new gui.MenuItem({
     label: 'Macを投げる',
     click: prividenie.mac
 }));
 
-menu.append(new Gui.MenuItem({
+menu.append(new gui.MenuItem({
     label: 'クソリプする',
     click: function () {}
 }));
 
-menu.append(new Gui.MenuItem({
+menu.append(new gui.MenuItem({
     label: '寝ろ',
     click: prividenie.sleep
 }));
 
-menu.append(new Gui.MenuItem({
+menu.append(new gui.MenuItem({
     label: 'チップチューンのあじぽ',
     click: function () {}
 }));
